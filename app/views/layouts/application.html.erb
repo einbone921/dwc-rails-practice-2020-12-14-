@@ -21,7 +21,7 @@
         <h1>Users</h1>
       </li>
       <li>
-        <h1>Books</h1>
+        <%= link_to "Books", books_path %>
       </li>
       <li>
         <%= link_to "logout", destroy_user_session_path, method: :delete %>
