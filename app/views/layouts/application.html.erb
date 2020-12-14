@@ -10,6 +10,31 @@
   </head>
 
   <body>
+      <li>
+        <h1>Home</h1>
+      </li>
+    <!--deviseで用意されているヘルパーメソッド-->
+    <% if user_signed_in? %>
+      <li>
+        <h1>Users</h1>
+      </li>
+      <li>
+        <h1>Books</h1>
+      </li>
+      <li>
+        <%= link_to "logout", destroy_user_session_path, method: :delete %>
+      </li>
+    <% else %>
+      <li>
+        <h1>About</h1>
+      </li>
+      <li>
+        <%= link_to "sign up", new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to "login", new_user_session_path %>
+      </li>
+    <% end %>
     <%= yield %>
   </body>
 </html>
