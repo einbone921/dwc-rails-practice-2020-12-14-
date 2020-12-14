@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    
-    
+
+
       <li>
         <h1>Home</h1>
       </li>
@@ -28,7 +28,7 @@
       </li>
     <% else %>
       <li>
-        <h1>About</h1>
+        <%= link_to "About", about_path %>
       </li>
       <li>
         <%= link_to "sign up", new_user_registration_path %>
